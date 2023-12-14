@@ -1,0 +1,176 @@
+/* App.css */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#theme {
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tema claro */
+.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Tema oscuro */
+.dark-theme {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Tema colorido */
+.colorful-theme {
+  background-color: #e74c3c;
+  color: #0027a7;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+ 
+  margin-bottom: 20px;
+}
+
+/* .selector-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%; 
+ 
+} */
+
+.theme-selector {
+  text-align: right;
+}
+
+.level-selector {
+  text-align: left;
+}
+
+.counter {
+  margin-top: 24px;
+  text-align: center;
+  font-weight: 700;
+
+}
+
+.memory-game {
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.memory-card {
+  width: calc(16.666% - 10px);
+  height: calc(20% - 10px);
+  margin: 5px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: transform 0.2s;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+/* Estilos específicos para cada tema en las caras de las cartas */
+.light-theme .front-face,
+.light-theme .back-face,
+.light-theme .select-dropdown select {
+  background: #e0e1e6;
+  color: #000000;
+  font-weight: 700;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme .front-face,
+.dark-theme .back-face,
+.dark-theme .select-dropdown select {
+  background: #485766;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.colorful-theme .front-face,
+.colorful-theme .back-face,
+.colorful-theme .select-dropdown select {
+  background: #e5ff73;
+  color: #0027a7;
+  font-weight: 700;
+}
+
+.select-dropdown {
+  position: relative;
+  margin-top: 20px;
+}
+
+.select-dropdown label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.select-dropdown .select-wrapper {
+  position: relative;
+}
+
+.select-dropdown select {
+  font-size: 1rem;
+  font-weight: normal;
+  max-width: 100%;
+  padding: 8px 10px 8px 10px;
+  border: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+}
+
+.select-dropdown:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  width: 0;
+  height: 0;
+  margin-top: 11px;
+  border-top: 5px solid #aaa;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
