@@ -174,3 +174,30 @@
   border-right: 5px solid transparent;
   border-left: 5px solid transparent;
 }
+
+/* Estilos para pantallas pequeñas */
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .theme-selector,
+  .level-selector,
+  .counter {
+    width: 100%;
+  }
+
+  .select-dropdown {
+    margin-top: 10px;
+  }
+
+  .memory-game {
+    width: 100vw;
+  }
+
+  .memory-card {
+    width: calc(33.33% - 10px);
+    height: calc(15% - 10px);
+  }
+}
